@@ -2,7 +2,7 @@
 
 A travel company website built with Next.js, showcasing curated India and international destinations, with a working enquiry system backed by MongoDB.
 
-**Live site:** https://travel-unbounded-fu43ydu8g-sharthgoulis-projects.vercel.app
+**Live site:** https://travel-unbounded-two.vercel.app
 
 ## Tech Stack
 
