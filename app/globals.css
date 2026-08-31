@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-fraunces: "Fraunces", serif;
+  --font-inter: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ece5d3;
+  color: #12201c;
+}
+
+/* Faint dotted topographic texture used behind dark hero/CTA sections */
+.bg-topo-dark {
+  background-color: #12201c;
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(236, 229, 211, 0.14) 1px,
+    transparent 0
+  );
+  background-size: 22px 22px;
+}
+
+.bg-topo-light {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(18, 32, 28, 0.09) 1px,
+    transparent 0
+  );
+  background-size: 22px 22px;
+}
+
+/* Dashed "route line" signature element used between sections */
+.route-line {
+  position: relative;
+  height: 2px;
+  background-image: linear-gradient(to right, #b98b3e 55%, transparent 45%);
+  background-size: 14px 2px;
+  background-repeat: repeat-x;
+}
+
+.route-line::before,
+.route-line::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background: #b98b3e;
+  transform: translateY(-50%);
+}
+
+.route-line::before {
+  left: 0;
+}
+
+.route-line::after {
+  right: 0;
+}
+
+/* Coordinate tag chip used on destination cards */
+.coord-tag {
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+}
+
+/* Visible keyboard focus ring, kept consistent across custom controls */
+.focus-brass:focus-visible {
+  outline: 2px solid #b98b3e;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
